@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "558743175031",
+    "project_id": "adcetecoroute-dc3f6",
+    "storage_bucket": "adcetecoroute-dc3f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558743175031:android:d5326a65bcc4ee3ce4ab72",
+        "android_client_info": {
+          "package_name": "com.example.flutter_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-6oq-7TWU2svNNZNEZH9sEMm95MjZxOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
