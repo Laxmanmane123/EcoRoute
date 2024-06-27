@@ -44,7 +44,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAZUU5OT1FUCymEWiudnQEX0GS02FTWbcM',
+    apiKey: 'Rplace With your Api key',
     appId: '1:558743175031:web:77a27ea0c3923ab0e4ab72',
     messagingSenderId: '558743175031',
     projectId: 'adcetecoroute-dc3f6',
@@ -54,7 +54,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB-6oq-7TWU2svNNZNEZH9sEMm95MjZxOI',
+    apiKey: 'Rplace With your Api key',
     appId: '1:558743175031:android:d5326a65bcc4ee3ce4ab72',
     messagingSenderId: '558743175031',
     projectId: 'adcetecoroute-dc3f6',
@@ -62,7 +62,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBhNXYXPjK3g6wI-ypy4BBTk9gr7xc4J5k',
+    apiKey: 'Rplace With your Api key',
     appId: '1:558743175031:ios:5b1fa634a6844333e4ab72',
     messagingSenderId: '558743175031',
     projectId: 'adcetecoroute-dc3f6',
@@ -71,7 +71,7 @@ class DefaultFirebaseOptions {
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBhNXYXPjK3g6wI-ypy4BBTk9gr7xc4J5k',
+    apiKey: 'Rplace With your Api key',
     appId: '1:558743175031:ios:5b1fa634a6844333e4ab72',
     messagingSenderId: '558743175031',
     projectId: 'adcetecoroute-dc3f6',
