@@ -178,15 +178,15 @@ class UserRequestPage extends StatelessWidget {
 
   void sendSMS() async {
     print('Running');
-    final accountSid = 'AC2faf641161acf66d162440308bca69ee';
-    final authToken = 'ca7e2014397373a39bb3dcd7700d4653';
-    final twilioNumber = '+16093722092'; // Twilio phone number
-    final recipientNumber = '+918380815946'; // Recipient phone number
+    final accountSid = 'Rplace With your Api key';
+    final authToken = 'Rplace With your Api key';
+    final twilioNumber = '+Rplace With your Api key'; // Twilio phone number
+    final recipientNumber = '+Rplace With your Api key'; // Recipient phone number
     final messageBody =
         'You have got a Pickup Request please check in EcoRoute App';
 
     final url = Uri.parse(
-        'https://api.twilio.com/2010-04-01/Accounts/$accountSid/Messages.json');
+        'Rplace With your Api key');
 
     final response = await http.post(
       url,
