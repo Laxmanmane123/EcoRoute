@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/login_warrior.dart';
+import 'package:flutter_auth/Screens/Welcome/components/driver_req.dart';
 import 'package:flutter_auth/Screens/Welcome/components/first_app_page.dart';
 import 'package:flutter_auth/Screens/Welcome/components/home_warrior.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_auth/Screens/Welcome/components/signup_warrior.dart';
 import 'package:flutter_auth/Screens/Welcome/components/warrior_report.dart';
-
 
 class warrior_screen extends StatelessWidget {
   const warrior_screen({Key? key}) : super(key: key);
@@ -30,7 +30,7 @@ class warrior_screen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Page'),
         centerTitle: true,
-        backgroundColor:  const Color(0xFFF5860C),
+        backgroundColor: const Color(0xFFF5860C),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
@@ -39,7 +39,7 @@ class warrior_screen extends StatelessWidget {
           ),
         ],
       ),
-       drawer: Drawer(
+      drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -84,7 +84,8 @@ class warrior_screen extends StatelessWidget {
                 Navigator.pop(context); // Closes the drawer
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => signup_waste_worrier_screen()),
+                  MaterialPageRoute(
+                      builder: (context) => signup_waste_worrier_screen()),
                 ); // Closes the drawer
               },
             ),
@@ -205,7 +206,7 @@ class warrior_screen extends StatelessWidget {
               // REPORT BLOCK
               Positioned(
                 left: 32,
-                top: 550,
+                top: 630,
                 child: Container(
                   width: 336,
                   height: 80,
@@ -226,6 +227,88 @@ class warrior_screen extends StatelessWidget {
                         spreadRadius: 0,
                       )
                     ],
+                  ),
+                ),
+              ),
+              //NEW TAB
+              Positioned(
+                left: 32,
+                top: 500,
+                child: Container(
+                  width: 336,
+                  height: 80,
+                  decoration: ShapeDecoration(
+                    gradient: const RadialGradient(
+                      center: Alignment(1, 0.50),
+                      radius: 0.49,
+                      colors: [Color(0xFFFF4E03), Color(0xFFFF8900)],
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 115,
+                top: 510,
+                child: SizedBox(
+                  width: 241,
+                  height: 80, // Adjust the height based on your design
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return DriverPage(); // Make sure the class name is correct
+                          },
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            // Wrap RichText with Expanded
+                            child: RichText(
+                              text: const TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'Accept \n',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 36,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'Accept Your Request',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -267,7 +350,7 @@ class warrior_screen extends StatelessWidget {
               //     ),
               //   ),
               // ),
-            //  SET RADIUS BLOCK
+              //  SET RADIUS BLOCK
               Positioned(
                 left: 32,
                 top: 350,
@@ -294,43 +377,6 @@ class warrior_screen extends StatelessWidget {
                   ),
                 ),
               ),
-            //  ALARAM TAB
-              // Positioned(
-              //   left: 30,
-              //   top: 471,
-              //   child: GestureDetector(
-              //     onTap: () {
-              //       // Navigate to the MyHomePage (or any other desired page)
-              //       Navigator.push(
-              //         context,
-              //         MaterialPageRoute(builder: (context) => MyHomePage()),
-              //       );
-              //     },
-              //     child: Container(
-              //       width: 340,
-              //       height: 90,
-              //       decoration: ShapeDecoration(
-              //         gradient: const RadialGradient(
-              //           center: Alignment(1, 0.50),
-              //           radius: 0.35,
-              //           colors: [Color(0xFFFF4E03), Color(0xFFFF8900)],
-              //         ),
-              //         shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(20),
-              //         ),
-              //         shadows: const [
-              //           BoxShadow(
-              //             color: Color(0x3F000000),
-              //             blurRadius: 4,
-              //             offset: Offset(0, 4),
-              //             spreadRadius: 0,
-              //           )
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-
               Positioned(
                 left: 35,
                 top: 362,
@@ -386,11 +432,10 @@ class warrior_screen extends StatelessWidget {
                   ),
                 ),
               ),
-              
 
               Positioned(
                 left: 26,
-                top: 560,
+                top: 640,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -419,7 +464,7 @@ class warrior_screen extends StatelessWidget {
               ),
               Positioned(
                 left: 200,
-                top: 550,
+                top: 630,
                 child: Container(
                   width: 180,
                   height: 80,
@@ -570,7 +615,6 @@ class warrior_screen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
-                   
                   ),
                 ),
               ),
@@ -661,7 +705,7 @@ class warrior_screen extends StatelessWidget {
               //       ),
               //     ),
               //   ),
-              // ),  
+              // ),
             ],
           ),
         ),

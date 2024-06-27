@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Welcome/components/alarm.dart';
 import 'package:flutter_auth/Screens/Welcome/components/first_app_page.dart';
+import 'package:flutter_auth/Screens/Welcome/components/pickup.dart';
+// import 'package:flutter_auth/Screens/Welcome/components/pickup_user.dart';
 import 'package:flutter_auth/Screens/Welcome/components/report_app.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_auth/Screens/Welcome/components/signup_citizen.dart';
@@ -207,11 +209,11 @@ class Homeapp extends StatelessWidget {
               // ),
               // REPORT BLOCK
               Positioned(
-                left: 32,
-                top: 600,
+                left: 46,
+                top: 620,
                 child: Container(
-                  width: 336,
-                  height: 80,
+                  width: 300,
+                  height: 60,
                   decoration: ShapeDecoration(
                     gradient: const RadialGradient(
                       center: Alignment(1, 0.50),
@@ -272,11 +274,11 @@ class Homeapp extends StatelessWidget {
               // ),
               //  SET RADIUS BLOCK
               Positioned(
-                left: 32,
+                left: 47,
                 top: 350,
                 child: Container(
-                  width: 340,
-                  height: 90,
+                  width: 300,
+                  height: 60,
                   decoration: ShapeDecoration(
                     gradient: const RadialGradient(
                       center: Alignment(1, 0.50),
@@ -299,11 +301,11 @@ class Homeapp extends StatelessWidget {
               ),
               //  ALARAM TAB
               Positioned(
-                left: 30,
-                top: 471,
+                left: 47,
+                top: 445,
                 child: Container(
-                  width: 340,
-                  height: 90,
+                  width: 300,
+                  height: 60,
                   decoration: ShapeDecoration(
                     gradient: const RadialGradient(
                       center: Alignment(1, 0.50),
@@ -324,10 +326,93 @@ class Homeapp extends StatelessWidget {
                   ),
                 ),
               ),
+              //PICKUP REQUEST
+              Positioned(
+                left: 47,
+                top: 530,
+                child: Container(
+                  width: 300,
+                  height: 60,
+                  decoration: ShapeDecoration(
+                    gradient: const RadialGradient(
+                      center: Alignment(1, 0.50),
+                      radius: 0.35,
+                      colors: [Color(0xFFFF4E03), Color(0xFFFF8900)],
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    shadows: const [
+                      BoxShadow(
+                        color: Color(0x3F000000),
+                        blurRadius: 4,
+                        offset: Offset(0, 4),
+                        spreadRadius: 0,
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              // pickup request text
+              Positioned(
+                left: 73,
+                top: 528,
+                child: SizedBox(
+                  width: 241,
+                  height: 80, // Adjust the height based on your design
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return UserRequestPage(); // Make sure the class name is correct
+                          },
+                        ),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            // Wrap RichText with Expanded
+                            child: RichText(
+                              text: const TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: 'Send Request\n',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 33,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: 'Send your Pickup Request',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
               Positioned(
-                left: 35,
-                top: 362,
+                left: 43,
+                top: 357,
                 child: SizedBox(
                   width: 241,
                   height: 80, // Adjust the height based on your design
@@ -361,15 +446,15 @@ class Homeapp extends StatelessWidget {
                                       fontWeight: FontWeight.w700,
                                     ),
                                   ),
-                                  TextSpan(
-                                    text: 'Setup your radius',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
+                                  // TextSpan(
+                                  //   text: 'Setup your radius',
+                                  //   style: TextStyle(
+                                  //     color: Colors.white,
+                                  //     fontSize: 18,
+                                  //     fontFamily: 'Inter',
+                                  //     fontWeight: FontWeight.w700,
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),
@@ -381,8 +466,8 @@ class Homeapp extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 148,
-                top: 480,
+                left: 188,
+                top: 450,
                 child: GestureDetector(
                   onTap: () {
                     // Navigate to the MyHomePage (or any other desired page)
@@ -413,25 +498,25 @@ class Homeapp extends StatelessWidget {
                                       fontWeight: FontWeight.w700,
                                     ),
                                   ),
-                                  TextSpan(
-                                    text: 'set ',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text:
-                                        'an alert alarm when the truck enters your location',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 15,
-                                      fontFamily: 'Inter',
-                                      fontWeight: FontWeight.w700,
-                                    ),
-                                  ),
+                                  // TextSpan(
+                                  //   text: 'set ',
+                                  //   style: TextStyle(
+                                  //     color: Colors.white,
+                                  //     fontSize: 13,
+                                  //     fontFamily: 'Inter',
+                                  //     fontWeight: FontWeight.w700,
+                                  //   ),
+                                  // ),
+                                  // TextSpan(
+                                  //   text:
+                                  //       'an alert alarm when the truck enters your location',
+                                  //   style: TextStyle(
+                                  //     color: Colors.white,
+                                  //     fontSize: 13,
+                                  //     fontFamily: 'Inter',
+                                  //     fontWeight: FontWeight.w700,
+                                  //   ),
+                                  // ),
                                 ],
                               ),
                             ),
@@ -445,7 +530,7 @@ class Homeapp extends StatelessWidget {
 
               Positioned(
                 left: 26,
-                top: 613,
+                top: 617,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -472,11 +557,12 @@ class Homeapp extends StatelessWidget {
                   ),
                 ),
               ),
+
               Positioned(
-                left: 240,
-                top: 600,
+                left: 225,
+                top: 610,
                 child: Container(
-                  width: 150,
+                  width: 120,
                   height: 80,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
@@ -623,10 +709,10 @@ class Homeapp extends StatelessWidget {
               // ),
               Positioned(
                 left: 270,
-                top: 349,
+                top: 347,
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 80,
+                  height: 70,
                   decoration: ShapeDecoration(
                     image: const DecorationImage(
                       image: AssetImage("assets/images/ms.png"),
@@ -664,10 +750,10 @@ class Homeapp extends StatelessWidget {
               ),
               Positioned(
                 left: 32,
-                top: 465,
+                top: 430,
                 child: Container(
-                  width: 95,
-                  height: 100,
+                  width: 85,
+                  height: 90,
                   decoration: ShapeDecoration(
                     image: const DecorationImage(
                       image: AssetImage("assets/images/cl.png"),

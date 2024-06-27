@@ -60,10 +60,24 @@ class _MapSampleState extends State<MapSample> {
     });
   }
 
+// Helper function to parse time string into TimeOfDay
+  TimeOfDay? _parseTimeString(String timeStr) {
+    try {
+      // Parse time string into DateTime
+      DateTime parsedTime = DateFormat.jm().parse(timeStr);
+      // Convert DateTime to TimeOfDay
+      return TimeOfDay.fromDateTime(parsedTime);
+    } catch (e) {
+      print('Error parsing time string: $timeStr');
+      return null; // Handle parsing error gracefully
+    }
+  }
+
   Future<void> fetchUserAlarmData() async {
     try {
       final userUid = GlobalData.currentUserUid;
 
+      print("Helli");
       if (userUid != null) {
         final userAlarmRef =
             FirebaseFirestore.instance.collection('useralarm').doc(userUid);
